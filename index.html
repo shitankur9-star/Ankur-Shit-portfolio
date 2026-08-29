@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Ankur Shit, Frontend Developer and B.Tech CSE student at Cooch Behar Government Engineering College.">
+  <meta name="keywords" content="Ankur Shit, Frontend Developer, CSE Student, CGEC, Web Developer, Portfolio">
+  <meta name="author" content="Ankur Shit">
+  <meta name="theme-color" content="#080b18">
+  <title>Ankur Shit | Frontend Developer & CSE Student</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page-loader" id="pageLoader" aria-label="Loading">
+    <div class="loader-ring"></div>
+  </div>
+
+  <div class="bg-orb orb-one"></div>
+  <div class="bg-orb orb-two"></div>
+  <div class="bg-grid"></div>
+
+  <header class="site-header" id="header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Ankur Shit home">
+        <span class="brand-mark">A</span>
+        <span>ANKUR<span class="accent">.</span></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#github" class="nav-link">GitHub</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="status-dot"></span> Available for learning & collaboration</p>
+          <h1>Hi, I'm <span class="gradient-text">Ankur Shit</span></h1>
+          <h2><span id="typingText"></span><span class="typing-cursor">|</span></h2>
+          <p class="hero-description">
+            B.Tech CSE student at <strong>Cooch Behar Government Engineering College</strong>,
+            passionate about building modern, responsive and user-friendly web experiences.
+          </p>
+
+          <div class="hero-actions">
+            <a href="assets/resume.pdf" class="btn btn-primary" download>
+              <i class="fa-solid fa-download"></i> Download Resume
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              Contact Me <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="social-row" aria-label="Social links">
+            <a href="https://github.com/shitankur9-starsvg" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn (add your profile URL)"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:shitankur9@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.hackerrank.com/profile/shitankur9" target="_blank" rel="noopener" aria-label="HackerRank"><i class="fa-brands fa-hackerrank"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="image-glow"></div>
+          <div class="profile-frame glass-card">
+            <div class="image-ring">
+              <img src="assets/images/profile.jpg" alt="Portrait of Ankur Shit">
+            </div>
+            <div class="floating-chip chip-one"><i class="fa-solid fa-code"></i> Frontend</div>
+            <div class="floating-chip chip-two"><i class="fa-solid fa-laptop-code"></i> CSE</div>
+            <div class="floating-chip chip-three"><i class="fa-solid fa-bolt"></i> Builder</div>
+          </div>
+          <div class="hero-stat stat-one"><strong>06+</strong><span>Core Skills</span></div>
+          <div class="hero-stat stat-two"><strong>∞</strong><span>Learning</span></div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About"><span></span> Scroll to explore</a>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">01 — About</p>
+          <h2>Building today. <span class="gradient-text">Learning every day.</span></h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-card glass-card reveal">
+            <div class="icon-box"><i class="fa-solid fa-user-astronaut"></i></div>
+            <h3>A curious CSE student</h3>
+            <p>
+              I am a passionate B.Tech CSE student and aspiring Frontend Developer.
+              I enjoy turning ideas into clean, responsive and intuitive interfaces.
+              I continuously explore new technologies and strengthen my programming fundamentals.
+            </p>
+          </div>
+          <div class="about-content reveal">
+            <p class="lead">
+              My goal is to grow into a skilled Software Engineer while contributing to
+              meaningful and innovative projects.
+            </p>
+            <div class="about-points">
+              <div><i class="fa-solid fa-check"></i><span>Modern, responsive web experiences</span></div>
+              <div><i class="fa-solid fa-check"></i><span>Strong programming fundamentals</span></div>
+              <div><i class="fa-solid fa-check"></i><span>Continuous learning and experimentation</span></div>
+              <div><i class="fa-solid fa-check"></i><span>Problem solving with a practical mindset</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">02 — Skills</p>
+          <h2>Tools I use to <span class="gradient-text">create & solve.</span></h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card glass-card reveal">
+            <div class="skill-icon"><i class="fa-solid fa-c"></i></div>
+            <div class="skill-top"><h3>C</h3><span>70%</span></div>
+            <div class="skill-track"><span style="--level:70%"></span></div>
+          </article>
+          <article class="skill-card glass-card reveal">
+            <div class="skill-icon cpp">C++</div>
+            <div class="skill-top"><h3>C++</h3><span>70%</span></div>
+            <div class="skill-track"><span style="--level:70%"></span></div>
+          </article>
+          <article class="skill-card glass-card reveal">
+            <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+            <div class="skill-top"><h3>Python</h3><span>65%</span></div>
+            <div class="skill-track"><span style="--level:65%"></span></div>
+          </article>
+          <article class="skill-card glass-card reveal">
+            <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+            <div class="skill-top"><h3>HTML5</h3><span>90%</span></div>
+            <div class="skill-track"><span style="--level:90%"></span></div>
+          </article>
+          <article class="skill-card glass-card reveal">
+            <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+            <div class="skill-top"><h3>CSS3</h3><span>85%</span></div>
+            <div class="skill-track"><span style="--level:85%"></span></div>
+          </article>
+          <article class="skill-card glass-card reveal">
+            <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+            <div class="skill-top"><h3>JavaScript</h3><span>75%</span></div>
+            <div class="skill-track"><span style="--level:75%"></span></div>
+          </article>
+        </div>
+
+        <div class="skill-tags reveal">
+          <span>Responsive Design</span><span>Git & GitHub</span><span>Problem Solving</span><span>DSA — Learning</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">03 — Education</p>
+          <h2>Where I'm <span class="gradient-text">growing.</span></h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-line"></div>
+          <article class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-card">
+              <span class="timeline-year">B.Tech</span>
+              <h3>Computer Science & Engineering</h3>
+              <p>Cooch Behar Government Engineering College (CGEC)</p>
+              <span class="timeline-note"><i class="fa-solid fa-graduation-cap"></i> Undergraduate Student</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">04 — Projects</p>
+          <h2>Small builds, <span class="gradient-text">big learning.</span></h2>
+          <p>Project placeholders are ready for you to replace with your real GitHub repositories and live demos.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card glass-card reveal">
+            <div class="project-number">01</div>
+            <div class="project-icon"><i class="fa-solid fa-window-maximize"></i></div>
+            <h3>Portfolio Website</h3>
+            <p>A modern responsive personal portfolio focused on clean UI, accessibility and smooth interactions.</p>
+            <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <div class="project-links"><a href="#" aria-label="Portfolio GitHub placeholder"><i class="fa-brands fa-github"></i> GitHub</a><a href="#" aria-label="Portfolio live demo placeholder">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </article>
+
+          <article class="project-card glass-card reveal">
+            <div class="project-number">02</div>
+            <div class="project-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+            <h3>Weather App</h3>
+            <p>A responsive weather interface concept for displaying current conditions and forecast information.</p>
+            <div class="project-tags"><span>JavaScript</span><span>API</span><span>CSS</span></div>
+            <div class="project-links"><a href="#" aria-label="Weather GitHub placeholder"><i class="fa-brands fa-github"></i> GitHub</a><a href="#" aria-label="Weather live demo placeholder">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </article>
+
+          <article class="project-card glass-card reveal">
+            <div class="project-number">03</div>
+            <div class="project-icon"><i class="fa-solid fa-calculator"></i></div>
+            <h3>Calculator</h3>
+            <p>A clean calculator interface demonstrating JavaScript logic, DOM interaction and responsive layout.</p>
+            <div class="project-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <div class="project-links"><a href="#" aria-label="Calculator GitHub placeholder"><i class="fa-brands fa-github"></i> GitHub</a><a href="#" aria-label="Calculator live demo placeholder">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </article>
+
+          <article class="project-card glass-card reveal">
+            <div class="project-number">04</div>
+            <div class="project-icon"><i class="fa-solid fa-list-check"></i></div>
+            <h3>To-Do App</h3>
+            <p>A simple productivity app concept with task creation, completion states and an intuitive interface.</p>
+            <div class="project-tags"><span>JavaScript</span><span>DOM</span><span>UI</span></div>
+            <div class="project-links"><a href="#" aria-label="To Do GitHub placeholder"><i class="fa-brands fa-github"></i> GitHub</a><a href="#" aria-label="To Do live demo placeholder">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </article>
+
+          <article class="project-card glass-card reveal">
+            <div class="project-number">05</div>
+            <div class="project-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>Landing Page</h3>
+            <p>A polished landing-page concept focused on hierarchy, responsive design and conversion-friendly UI.</p>
+            <div class="project-tags"><span>HTML5</span><span>CSS3</span><span>Responsive</span></div>
+            <div class="project-links"><a href="#" aria-label="Landing page GitHub placeholder"><i class="fa-brands fa-github"></i> GitHub</a><a href="#" aria-label="Landing page live demo placeholder">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="github">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">05 — GitHub</p>
+          <h2>Code, commit, <span class="gradient-text">repeat.</span></h2>
+        </div>
+
+        <div class="github-grid">
+          <div class="github-card glass-card reveal">
+            <div class="github-head">
+              <div><i class="fa-brands fa-github"></i><h3>Contribution Activity</h3></div>
+              <span>GitHub</span>
+            </div>
+            <div class="calendar-placeholder" aria-label="GitHub contribution calendar placeholder">
+              <div class="calendar-top"><span>Less</span><i></i><i></i><i></i><i></i><span>More</span></div>
+              <div class="calendar-grid" id="calendarGrid"></div>
+              <p>Replace this placeholder with your live GitHub contribution calendar.</p>
+            </div>
+            <a class="text-link" href="https://github.com/shitankur9-starsvg" target="_blank" rel="noopener">View GitHub Profile <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <div class="repos-card glass-card reveal">
+            <div class="github-head">
+              <div><i class="fa-solid fa-code-branch"></i><h3>Latest Repositories</h3></div>
+            </div>
+            <div class="repo-placeholder"><i class="fa-solid fa-code"></i><div><strong>Repository cards ready</strong><span>Add your real repositories here.</span></div></div>
+            <div class="repo-placeholder"><i class="fa-solid fa-star"></i><div><strong>Featured project</strong><span>Highlight your best build.</span></div></div>
+            <a class="text-link" href="https://github.com/shitankur9-starsvg" target="_blank" rel="noopener">Explore Repositories <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-box glass-card reveal">
+          <div class="contact-copy">
+            <p class="section-kicker">06 — Contact</p>
+            <h2>Let's build something <span class="gradient-text">meaningful.</span></h2>
+            <p>Have a project idea, collaboration opportunity or just want to say hello? Send me a message.</p>
+
+            <div class="contact-details">
+              <a href="mailto:shitankur9@gmail.com"><i class="fa-solid fa-envelope"></i><span><small>Email</small>shitankur9@gmail.com</span></a>
+              <a href="tel:+917477524598"><i class="fa-solid fa-phone"></i><span><small>Phone</small>+91 7477524598</span></a>
+              <a href="#"><i class="fa-solid fa-location-dot"></i><span><small>Location</small>West Medinipur, West Bengal</span></a>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your idea..." required></textarea>
+            <button class="btn btn-primary" type="submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+            <p class="form-note" id="formNote" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><strong>Ankur<span class="accent">.</span></strong><span>Frontend Developer & CSE Student</span></div>
+      <div class="footer-socials">
+        <a href="https://github.com/shitankur9-starsvg" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="LinkedIn (add your profile URL)"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:shitankur9@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <p>© <span id="year"></span> Ankur Shit. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <script src="js/script.js"></script>
+</body>
+</html>
