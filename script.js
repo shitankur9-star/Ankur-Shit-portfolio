@@ -95,13 +95,117 @@ document.addEventListener("DOMContentLoaded", () => {
 
   backTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
-  // Build a lightweight visual placeholder for the GitHub contribution calendar.
+
+  // Load real GitHub contribution activity.
   const calendar = document.getElementById("calendarGrid");
-  for (let i = 0; i < 126; i++) {
-    const cell = document.createElement("i");
-    cell.setAttribute("aria-hidden", "true");
-    calendar.appendChild(cell);
+  const contributionTotal = document.getElementById("github-total");
+  const contributionStatus = document.getElementById("github-status");
+
+  async function loadGitHubContributions() {
+    if (!calendar) return;
+
+    calendar.replaceChildren();
+
+    try {
+      const response = await fetch(
+        "/api/contributions?username=shitankur9-star"
+      );
+
+      if (!response.ok) {
+        throw new Error("Contribution API request failed");
+      }
+
+      const data = await response.json();
+
+      if (!Array.isArray(data.contributions)) {
+        throw new Error("Invalid contribution data");
+      }
+
+      const contributions = new Map(
+        data.contributions.map(day => [
+          day.date,
+          Number(day.count) || 0
+        ])
+      );
+
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      const start = new Date(today);
+      start.setDate(start.getDate() - 364);
+
+      // Align the calendar to Sunday.
+      start.setDate(start.getDate() - start.getDay());
+
+      let total = 0;
+      const fragment = document.createDocumentFragment();
+
+      for (let i = 0; i < 371; i++) {
+        const date = new Date(start);
+        date.setDate(start.getDate() + i);
+
+        const key = [
+          date.getFullYear(),
+          String(date.getMonth() + 1).padStart(2, "0"),
+          String(date.getDate()).padStart(2, "0")
+        ].join("-");
+
+        const count = contributions.get(key) || 0;
+        const future = date > today;
+
+        if (!future && date >= new Date(today.getTime() - 364 * 86400000)) {
+          total += count;
+        }
+
+        const cell = document.createElement("i");
+        cell.setAttribute("aria-hidden", "true");
+        cell.title = future
+          ? ""
+          : `${count} contributions on ${key}`;
+
+        // Adjust these classes to match your existing CSS.
+        let level = 0;
+        if (count >= 10) level = 4;
+        else if (count >= 6) level = 3;
+        else if (count >= 3) level = 2;
+        else if (count > 0) level = 1;
+
+        cell.classList.add(`level-${level}`);
+
+        if (future) {
+          cell.style.visibility = "hidden";
+        }
+
+        fragment.appendChild(cell);
+      }
+
+      calendar.appendChild(fragment);
+
+      if (contributionTotal) {
+        contributionTotal.textContent =
+          `${total.toLocaleString()} contributions`;
+      }
+
+      if (contributionStatus) {
+        contributionStatus.textContent =
+          "Live GitHub contribution activity";
+      }
+    } catch (error) {
+      console.error("GitHub contributions:", error);
+
+      if (contributionStatus) {
+        contributionStatus.textContent =
+          "Unable to load contributions. Please try again later.";
+      }
+
+      if (contributionTotal) {
+        contributionTotal.textContent = "Unavailable";
+      }
+    }
   }
+
+  loadGitHubContributions();
+
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
