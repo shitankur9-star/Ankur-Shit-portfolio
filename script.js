@@ -227,3 +227,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("year").textContent = new Date().getFullYear();
 });
+window.addEventListener("load", () => {
+  const loader = document.getElementById("pageLoader");
+
+  if (loader) {
+    loader.classList.add("hide");
+  }
+});
